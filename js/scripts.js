@@ -11,6 +11,8 @@ $(document).ready(function() {
 
     event.preventDefault();
     var arrayOfSickness = [];
+    var arrayOfSymptoms = [];
+    var arrayOfCoping = [];
     $("#result").show();
     $("input:checkbox[name=warning-signs]:checked").each(function() {
       var warningSigns = $(this).val();
@@ -19,14 +21,21 @@ $(document).ready(function() {
   });
     $("input:checkbox[name=health-symptoms]:checked").each(function() {
       var healthSymptoms = $(this).val();
+      arrayOfSymptoms.push(healthSymptoms);
     $("#result").append(healthSymptoms + "<br>");
   });
     $("input:checkbox[name=coping-methods]:checked").each(function() {
       var copingMethods = $(this).val();
+      arrayOfCoping.push(copingMethods);
     $("#result").append(copingMethods + "<br>");
   });
     $("#stress-test").hide();
-
-    console.log(arrayOfSickness.length);
+    if ($("input:checkbox[name=warning-signs]:checked").length >=2) {
+      $("#allGood").show();
+    } else if (arrayOfSickness.length >=3 || arrayOfSymptoms.length >=3) {
+      $("#help").show();
+    }
   });
+
+  //  console.log(arrayOfSickness.length);
 });
