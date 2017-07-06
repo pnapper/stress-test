@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stress Test</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.2.1.js"></script>
+  <script src="js/scripts.js"></script>
+</head>
+<body>
+  <form id="stress-test">
+    <div class="form-group">
+      <p>Are you currently experiencing any of these stress signs? Check all that apply:</p>
+      <input type="checkbox" name="warning-signs" value="sleep"> Loss of sleep.<br>
+      <input type="checkbox" name="warning-signs" value="overwhelmed"> Feeling overwhelmed.<br>
+      <input type="checkbox" name="warning-signs" value="appetite"> Change in appetite.<br>
+      <input type="checkbox" name="warning-signs" value="irritable"> Easily irritable.<br>
+      <input type="checkbox" name="warning-signs" value="hair"> Hair loss.<br>
+    </div>
+
+    <div>
+      <p>Which of these health symptoms are you currently experiencing? Check all that apply:</p>
+      <input type="checkbox" name="health-symptoms" value="blood"> High blood pressure.<br>
+      <input type="checkbox" name="health-symptoms" value="anxiety"> Anxiety.<br>
+      <input type="checkbox" name="health-symptoms" value="nausea"> Nausea.<br>
+      <input type="checkbox" name="health-symptoms" value="headache"> Headaches.<br>
+      <input type="checkbox" name="health-symptoms" value="teeth"> Teeth-grinding.<br>
+    </div>
+
+    <div>
+      <p>Which of these coping methods do you use? Check all that apply:</p>
+      <input type="checkbox" name="coping-methods" value="meditate"> Meditation.<br>
+      <input type="checkbox" name="coping-methods" value="time"> Time management.<br>
+      <input type="checkbox" name="coping-methods" value="pet"> Pet your dog or cat.<br>
+      <input type="checkbox" name="coping-methods" value="yoga"> Yoga.<br>
+      <input type="checkbox" name="coping-methods" value="counselor"> See a counselor.<br>
+    </div>
+    <button type="submit">Submit Survey</button>
+  </form>
+
+  <div>
+    <span id="result">
+      <p><b></b></p>
+    </span>
+  </div>
+</body>
+</html>
